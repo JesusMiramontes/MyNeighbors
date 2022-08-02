@@ -29,4 +29,9 @@ public class House {
     public Integer visitorsCount() {
         return visitors.size();
     }
+
+    public Owner getOwner() {
+        if (null == owner) owner = new Owner();
+        return owner;
+    }
 }
