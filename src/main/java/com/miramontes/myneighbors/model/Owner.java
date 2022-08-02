@@ -10,6 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "owner")
 @ToString
+@Builder
 public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

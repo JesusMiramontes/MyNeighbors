@@ -11,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "house")
 @ToString
+@Builder
 public class House {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +25,8 @@ public class House {
 
     @OneToMany(mappedBy = "house")
     private Set<Visitor> visitors;
+
+    public Integer visitorsCount() {
+        return visitors.size();
+    }
 }
