@@ -17,7 +17,7 @@ public class HouseController {
     }
 
     @GetMapping
-    public String listHouses(Model model){
+    public String listHouses(Model model) {
         model.addAttribute("list", repository.findAll());
         return "houses/list";
     }
